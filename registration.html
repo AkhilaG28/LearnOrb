@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="registrationLogin.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/> -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body style="background-color: #adecdf;">
+    <div id="mainContainerRegistration">
+        <form class="userFormRegistration">
+            <div class="heading">REGISTRATION</div>
+            <div class="userDetails">
+                <label>NAME</label>
+                <input type="text" required autocomplete="off"/>
+                <div class="animateLine"></div>
+            </div>
+            <div class="userDetails">
+                <label>USERNAME</label>
+                <input type="text" required autocomplete="off"/>
+                <div class="animateLine"></div>
+            </div>
+            <div class="userDetails">
+                <label>EMAIL</label>
+                <input type="email" required autocomplete="off"/>
+                <div class="animateLine"></div>
+            </div>
+            <div class="userDetails">
+                <label>PASSWORD</label>
+                <input type="password" required autocomplete="off"/>
+                <div class="animateLine"></div>
+            </div>
+            <div class="userDetails">
+                <label>SELECT COURSE</label>
+                <select id="selectedCourse" style="background-color: transparent;">
+                    <option value="Web Design">Web Design</option>
+                    <option value="App Development">App Development</option>
+                    <option value="Video Editing">Video Editing</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                    <option value="Seo Marketing">SEO Marketing</option>
+                    <option value="Content Writing">Content Writing</option>
+                </select>
+            </div>
+            <button>SIGN UP</button>
+            <div class="greySubset">Already have an account,<br><a href="login.html">login here</a></div>
+        </form>
+    </div>
+    <script type="text/javascript" src="registration.js"></script>
+</body>
+</html>
