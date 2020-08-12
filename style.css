@@ -24,12 +24,12 @@ p {
   font-size: 50px;
   color: teal;
   text-align: center;
-  font-family: 'Metropolis Regular';
+  font-family: "mistral";
   margin-bottom: 30px;
 }
 
-.popular-subheading{
-  font-size:35px;
+.popular-subheading {
+  font-size: 35px;
 }
 
 .course_head {
@@ -89,7 +89,7 @@ p {
   color: teal;
 }
 
-.footerBackground{
+.footerBackground {
   background: linear-gradient(
     to right,
     #03a9f4,
