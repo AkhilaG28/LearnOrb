@@ -8,7 +8,7 @@ window.onload = function(){
 function getUserData(){
     event.preventDefault()
     let selectedCourse = document.getElementById('selectedCourse').value
-    console.log(selectedCourse)
+    
     if(selectedCourse == 'Video Editing' || selectedCourse == 'Seo Marketing' || selectedCourse == 'Content Writing'){
         alert('The Selected Course is Not Open for Admissions.')
     }
@@ -31,8 +31,15 @@ function storeInLocalStorage(objData){
     
     if(localStorage.getItem('userRegistrationDetails')){
         let data = JSON.parse(localStorage.getItem('userRegistrationDetails'))
-        data.push(objData)
-        localStorage.setItem('userRegistrationDetails',JSON.stringify(data))
+        if(!checkForSimilarUserName(objData,data)){
+            data.push(objData)
+            localStorage.setItem('userRegistrationDetails',JSON.stringify(data))
+            // after registration go to the login page
+            window.location.href = 'login.html'
+        }
+        else{
+            alert('The username already exists, please change the username to register successfully.')
+        }
     }
     else{
         let arr = []
@@ -40,8 +47,12 @@ function storeInLocalStorage(objData){
         let data = JSON.parse(localStorage.getItem('userRegistrationDetails'))
         data.push(objData)
         localStorage.setItem('userRegistrationDetails',JSON.stringify(data))
+        // after registration go to the login page
+        window.location.href = 'login.html'
     }
+}
 
-    // after registration go to the login page
-    window.location.href = 'login.html'
+function checkForSimilarUserName(userData, referenceData){
+    let result = referenceData.find(item => item.username == userData.username)
+    return result
 }
