@@ -6,6 +6,13 @@ selectedCourse = JSON.parse( selectedCourse );
 selectedCourse = selectedCourse.selectedCourse
 console.log( selectedCourse );
 
+const userName = JSON.parse(localStorage.getItem('activeUser')).username.toUpperCase()
+let userNameDiv = document.getElementById('userName')
+userNameDiv.textContent = userName
+
+let quizHeading = document.querySelector('#quiz > h1')
+quizHeading.textContent = `Pre Evaluation for ${selectedCourse} Program`
+
 let questions
 selectedCourse == 'App Development' ? questions = [ ...app ] : questions = [ ...web ]
 
@@ -91,11 +98,11 @@ function showResult () {
     }
     else {
         document.getElementById( 'fail' ).play()
-        quizDone.innerHTML = `<h1>Result</h1>
+        quizDone.innerHTML = `<h1>RESULT</h1>
                               <h2 id = 'result'>Sorry</h2>
                               <p>You did not clear the evaluation.</p>
                               <p>Hope to see you in the next course with more grace.</p>
-                              <p style='padding-top:30%'>Click here to go back to <a href='userDashBoard.html' style='color:#0097a7'>dashboard</a></p>`
+                              <p style='padding-top:30%'>Click here to go back to <a href='userDashBoard.html' style='color:rgb(4, 80, 80)'>dashboard</a></p>`
     }
 }
 

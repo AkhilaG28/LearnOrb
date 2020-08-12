@@ -1,6 +1,4 @@
-body {
-  background-color: #eeeeee;
-}
+
 
 .grid {
   width: 600px;
@@ -15,12 +13,21 @@ body {
 
 h1 {
   text-align: center;
-  color: dodgerblue;
+  color: black;
+  /* position: relative;
+  top: 0px; */
+  z-index: 1;
+}
+
+.card-body{
+  margin-top: 30px;
+  border-radius: 39px;
+  background: #8bdbcb;
+ 
 }
 
 #ques {
-  background-color: black;
-  color: lawngreen;
+  color: rgb(4, 80, 80);
   text-align: center;
   border-radius: 8px;
   padding: 4% 2%;
@@ -32,26 +39,27 @@ h1 {
 }
 
 .button > button {
-  background-color: thistle;
+  /* background-color: thistle; */
+  color: rgb(4, 80, 80);
   text-align: center;
-  border-radius: 5px;
-  margin: 10px 40px 10px 8px;
+  border-radius: 10px;
+  margin: 10px auto 10px;
   padding: 10px 10px;
   width: 250px;
   font-size: 20px;
-  border: 1px solid teal;
+  border: 0px;
 }
 
 .button > button:hover {
   cursor: pointer;
-  background-color: #1d3c6a;
+  background-color: rgb(4, 80, 80);
   color: white;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right,
     #1a2980 0%,
     #26d0ce 51%,
     #1a2980 100%
-  );
+  ); */
 }
 
 .button > button:focus {
@@ -60,7 +68,6 @@ h1 {
 
 #progressQues {
   color: cadetblue;
-  float: right;
   font-weight: bold;
   font-size: 18px;
 }
@@ -82,4 +89,37 @@ h1 {
   font-family: "mistral";
   font-size: 60px;
   color: whitesmoke;
+}
+
+@media only screen and (max-width: 768px){
+  body {
+    background-color: #2bc5a6 !important;
+  }
+
+  .card{
+   background-color: #2bc5a6 !important; 
+  }
+
+  .card-body{
+    box-shadow:  24px 24px 40px #20947d, 
+    -24px -24px 40px #36f6d0;
+  }
+
+  #time{
+    position: relative;
+  }
+
+  #progressQues{
+    position: relative;
+    color: rgb(4, 80, 80);
+  }
+
+  #finalPage{
+    background-color: #2bc5a6;
+    box-shadow: 10px 15px 5px #cbcbcb62;
+  }
+
+  #result{
+    font-family: 'Metropolis Regular';
+  }
 }
