@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="userDashBoard.css" type="text/css">
+</head>
+<body>
+    <div>
+        <!-- Application Logo and User Name -->
+        <div class="d-flex shadow-sm py-2" id="applicationLogoBar">
+            <div class="ml-5 flex-grow-1">
+                <a href="userDashBoard.html"  style="text-decoration: none; color: black;"><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/2034214-84.png" style="height: 50px;"/><span>LearnOrb</span></a>
+            </div>
+            <div class="mr-5  mt-1 pt-2" id="userName"></div>
+        </div>
+
+
+        <div class="row" style="height: 760px;">
+            <div class="col-lg-3"></div>
+                <div class="sideBar" id="sideBarDiv">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="navbarBtnDiv d-flex justify-content-start">
+                            <a class="d-lg-none flex-grow-1 ml-4 mt-2" style="text-decoration: none; color: white;" href="#">Dashboard</a>
+                            <button class="navbar-toggler bg-white mr-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+        
+                        <div class="collapse navbar-collapse d-lg-flex flex-lg-column" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto d-flex flex-column mb-4  ml-3">
+                                <li class="nav-item active">
+                                <a class="nav-link" href="userDashBoard.html" id='sideNavBarOptionHome'><i class="fas fa-book ml-2 mr-3"></i>Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="#" id='sideNavBarOptionQuizzes'><i class="fas fa-pencil-alt ml-2 mr-3"></i>Quizzes</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="#" id='sideNavBarOptionStatistics'><i class="fas fa-chart-pie ml-2 mr-3"></i>Statistics</a>
+                                </li>
+                            </ul>
+                            <form class="form-inline my-2  ml-3 my-lg-0 d-lg-flex flex-lg-column align-items-end">
+                                <input class="form-control mr-sm-2 mb-lg-3" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 mr-lg-2 my-sm-0" id="sideNavBarSearchBtn">Search</button>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            <div class="col-lg-8 my-lg-5 pl-0">
+                <div class="bodyDashBoard">
+                    <div class="row">
+                        <div class="col webDesignCard d-none">
+                            <div class="border ml-2 shadow-sm p-3 mb-5 bg-white rounded ml-2">
+                                <p class="font"><i class="fas fa-photo-video fa-3x fa-color"></i></p>
+                                <p class="header">Web design</p>
+                                <p>
+                                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et nam est
+                                  debitis labore aut iusto unde doloremque velit pariatur temporibus
+                                </p>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#examInstructions">TAKE THE TEST</button>
+                            </div>
+                        </div>
+                        <div class="col appDevelopmentCard d-none">
+                            <div class="border ml-2 shadow p-3 mb-5 bg-white rounded">
+                                <p class="font"><i class="fas fa-tablet-alt fa-3x fa-color"></i></p>
+                                <p class="header">App Development</p>
+                                <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et nam est
+                                debitis labore aut iusto unde doloremque velit pariatur temporibus
+                                </p>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#examInstructions">TAKE THE TEST</button>
+                            </div>
+                        </div>
+                        <div class="col digitalMarketingCard d-none">
+                            <div class="border ml-2 shadow p-3 mb-5 bg-white rounded ml-2">
+                                <p class="font"><i class="fas fa-tv fa-3x fa-color"></i></p>
+                                <p class="header">Digital Marketing</p>
+                                <p>
+                                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et nam est
+                                  debitis labore aut iusto unde doloremque velit pariatur temporibus
+                                </p>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#examInstructions">TAKE THE TEST</button>
+                              </div>
+                        </div>
+
+                        <!-- Exam Instructions -->
+                        <div class="modal fade" id="examInstructions" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Exam Instructions</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>1. The Quiz contains 5 questions</p>
+                                    <p>2. There are no negative markings for the questions</p>
+                                    <p>3. You need to score atleast 70% to proceed further</p>
+                                    <p>4. GOOD LUCK!</p>
+                                </div>
+                                <div class="d-flex justify-content-end my-3">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <a role="button" class="btn btn-primary mx-3" href="quiz.html">PROCEED TO EXAMINATION</a>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+
+
+
+    
+  
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script type="text/javascript" src="userDashBoard.js"></script>
+</body>
+</html>
