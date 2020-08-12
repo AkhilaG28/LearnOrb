@@ -19,5 +19,14 @@ Our website LearnOrb enables users to access the courses, register and to attemp
 <img width="936" alt="Screenshot (209)" src="https://user-images.githubusercontent.com/61727888/90047505-a57dc900-dcef-11ea-9882-300773ab8bca.png">
 
 
-### Registration Page:
-- Allows users to register for the course with a unique username.
+### Registration & Login Pages:
+- Registration Page allows users to register for the course with a unique username. 
+- Login page enables users to get to their dashboard.
+
+<img width="267" alt="Screenshot (211)" src="https://user-images.githubusercontent.com/61727888/90048507-3e611400-dcf1-11ea-9c22-ad519a7999a0.png">
+<img width="259" alt="Screenshot (212)" src="https://user-images.githubusercontent.com/61727888/90048518-40c36e00-dcf1-11ea-95c8-f57813e60c28.png">
+
+### Dashboard Page:
+- The user logged in can see the course for which he/she registered and would be able to get to the next step.
+
+
