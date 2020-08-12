@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="quiz.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz</title>
+    <title>Basic Eval</title>
   </head>
   <body>
     <div class="grid">
@@ -15,7 +15,7 @@
         <source src="fail.mp3" type="audio/ogg">
       </audio>
       <div id="quiz">
-        <h1>QUIZ</h1>
+        <h1>BASIC EVALUATION</h1>
         <!-- Question -->
         <p id="ques"></p>
         <hr />
@@ -29,11 +29,16 @@
 
         <hr />
         <!-- Progress -->
-        <div id="progress"></div>
+        <div id="progress">
+          <div id="time">05:00</div>
+          <div id='progressQues'></div>
+        </div>
       </audio>
     </div>
 
     <!-- Script File -->
-    <script type="text/javascript" src="quiz.js"></script>
+    <script type="module" src="web.js"></script>
+    <script type="module" src="android.js"></script>
+    <script type="module" src="quiz.js"></script>
   </body>
 </html>

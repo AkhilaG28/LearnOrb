@@ -15,41 +15,71 @@ body {
 
 h1 {
   text-align: center;
+  color: dodgerblue;
 }
 
 #ques {
   background-color: black;
   color: lawngreen;
-
+  text-align: center;
   border-radius: 8px;
-  padding: 1% 2%;
+  padding: 4% 2%;
+  font-size: 26px;
 }
 
 .button {
-  margin-top: 30px;
+  margin: 30px 0;
 }
 
 .button > button {
-  background-color: bisque;
+  background-color: thistle;
   text-align: center;
   border-radius: 5px;
-  margin: 10px 40px 10px 0px;
+  margin: 10px 40px 10px 8px;
   padding: 10px 10px;
   width: 250px;
   font-size: 20px;
-  border: 1px solid #1d3c6a;
+  border: 1px solid teal;
 }
 
 .button > button:hover {
   cursor: pointer;
-  background-color: #2c0747;
+  background-color: #1d3c6a;
+  color: white;
+  background-image: linear-gradient(
+    to right,
+    #1a2980 0%,
+    #26d0ce 51%,
+    #1a2980 100%
+  );
 }
 
 .button > button:focus {
   outline: 0;
 }
 
-#progress {
-  color: #2b2b2b;
+#progressQues {
+  color: cadetblue;
+  float: right;
+  font-weight: bold;
   font-size: 18px;
+}
+
+#finalPage {
+  background-color: #1d3c6a;
+  color: floralwhite;
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+  padding: 10px 50px 50px 50px;
+  border-radius: 50px;
+  border: 2px solid #cbcbcb;
+  box-shadow: 10px 15px 5px #cbcbcb;
+  text-align: center;
+}
+
+#result {
+  font-family: "mistral";
+  font-size: 60px;
+  color: whitesmoke;
 }
