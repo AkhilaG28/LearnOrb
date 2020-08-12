@@ -43,5 +43,5 @@ function storeInLocalStorage(objData){
     }
 
     // after registration go to the login page
-    location.href = 'login.html'
+    window.location.href = 'login.html'
 }

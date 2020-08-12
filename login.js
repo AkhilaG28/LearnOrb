@@ -28,9 +28,10 @@ function getUserData(){
     if(validate){
         var activeUser = {}
         activeUser['username'] = allUserData[0].value
+        activeUser['selectedCourse'] = validate
         localStorage.setItem('activeUser',JSON.stringify(activeUser))
         // go to Dashboard
-        location.href = 'userDashBoard.html'
+        window.location.href = 'userDashBoard.html'
     }
     else{
         // show error
@@ -42,7 +43,8 @@ function validateData(data){
     var localData = JSON.parse(localStorage.getItem('userRegistrationDetails'))
     for(var i = 0; i < localData.length; i++){
         if(localData[i]['username'] == data.username && localData[i]['password'] == data.password){
-            return true
+            let userSelectedCourse = localData[i].selectedCourse
+            return userSelectedCourse
         }
     }
     return false
