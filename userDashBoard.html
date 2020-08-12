@@ -26,78 +26,76 @@
         </div>
         <div class="mr-5 mt-1 pt-2" id="userName"></div>
       </div>
-
-      <div class="row" style="height: 760px;">
-        <div class="col-lg-3"></div>
-        <div class="sideBar" id="sideBarDiv">
-          <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="navbarBtnDiv d-flex justify-content-start">
-              <a
-                class="d-lg-none flex-grow-1 ml-4 mt-2"
-                style="text-decoration: none; color: white;"
-                href="#"
-                >Dashboard</a
-              >
-              <button
-                class="navbar-toggler bg-white mr-3"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
-
-            <div
-              class="collapse navbar-collapse d-lg-flex flex-lg-column"
-              id="navbarSupportedContent"
+      <div class="sideBar" id="sideBarDiv">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="navbarBtnDiv d-flex justify-content-start">
+            <a
+              class="d-lg-none flex-grow-1 ml-md-4 mt-2"
+              style="text-decoration: none; color: white;"
+              href="#"
+              >Dashboard</a
             >
-              <ul class="navbar-nav mr-auto d-flex flex-column mb-4 ml-3">
-                <li class="nav-item active">
-                  <a
-                    class="nav-link"
-                    href="userDashBoard.html"
-                    id="sideNavBarOptionHome"
-                    ><i class="fas fa-book ml-2 mr-3"></i>Home
-                    <span class="sr-only">(current)</span></a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#" id="sideNavBarOptionQuizzes"
-                    ><i class="fas fa-pencil-alt ml-2 mr-3"></i>Quizzes</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#" id="sideNavBarOptionStatistics"
-                    ><i class="fas fa-chart-pie ml-2 mr-3"></i>Statistics</a
-                  >
-                </li>
-              </ul>
-              <form
-                class="form-inline my-2 ml-3 my-lg-0 d-lg-flex flex-lg-column align-items-end"
-              >
-                <input
-                  class="form-control mr-sm-2 mb-lg-3"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button
-                  class="btn btn-outline-success my-2 mr-lg-2 my-sm-0"
-                  id="sideNavBarSearchBtn"
+            <button
+              class="navbar-toggler bg-white mr-3"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+
+          <div
+            class="collapse navbar-collapse d-lg-flex flex-lg-column"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mr-auto d-flex flex-column mb-4 ml-2">
+              <li class="nav-item active">
+                <a
+                  class="nav-link"
+                  href="userDashBoard.html"
+                  id="sideNavBarOptionHome"
+                  ><i class="fas fa-book ml-2 mr-3"></i>Home
+                  <span class="sr-only">(current)</span></a
                 >
-                  Search
-                </button>
-              </form>
-            </div>
-          </nav>
-        </div>
-        <div class="col-lg-8 my-lg-5 pl-0">
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="sideNavBarOptionQuizzes"
+                  ><i class="fas fa-pencil-alt ml-2 mr-3"></i>Quizzes</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="sideNavBarOptionStatistics"
+                  ><i class="fas fa-chart-pie ml-2 mr-3"></i>Statistics</a
+                >
+              </li>
+            </ul>
+            <form
+              class="form-inline my-2 ml-2 my-lg-0 d-lg-flex flex-lg-column align-items-end"
+            >
+              <input
+                class="form-control mr-sm-2 mb-lg-3"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button
+                type="button"
+                class="btn btn-outline-success my-2 mr-lg-2 my-sm-0"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+        </nav>
+      </div>
+      <div class="row" style="height: 760px;">
+        <div class="col-lg-8 offset-lg-3 my-lg-5">
           <div class="bodyDashBoard">
-            <div class="row">
+            <div class="row px-0">
               <div class="col webDesignCard d-none">
                 <div
                   class="border ml-2 shadow-sm p-3 mb-5 bg-white rounded ml-2"
@@ -170,13 +168,13 @@
                 class="modal fade"
                 id="examInstructions"
                 tabindex="-1"
-                aria-labelledby="exampleModalLabel"
+                aria-labelledby="examInstructions"
                 aria-hidden="true"
               >
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">
+                      <h5 class="modal-title" id="examInstructions">
                         Exam Instructions
                       </h5>
                       <button

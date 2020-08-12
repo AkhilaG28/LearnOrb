@@ -13,14 +13,14 @@ window.addEventListener('DOMContentLoaded',()=>{
 displayCard=(selectedCourse)=>{
     if(selectedCourse == 'Web Design'){
         let card = document.querySelector('.webDesignCard')
-        card.classList = 'col webDesignCard'
+        card.classList = 'col my-5 py-3 mr-2 col-md-10 mx-md-auto my-lg-0 py-lg-0 webDesignCard'
     }
     else if(selectedCourse == 'App Development'){
         let card = document.querySelector('.appDevelopmentCard')
-        card.classList = 'col appDevelopmentCard'
+        card.classList = 'col my-5 py-3 mr-2 col-md-10 mx-md-auto my-lg-0 py-lg-0 appDevelopmentCard'
     }
     else if(selectedCourse == 'Digital Marketing'){
         let card = document.querySelector('.digitalMarketingCard')
-        card.classList = 'col digitalMarketingCard'
+        card.classList = 'col my-5 py-3 mr-2 col-md-10 mx-md-auto my-lg-0 py-lg-0 digitalMarketingCard'
     }
 }
