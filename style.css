@@ -1,0 +1,124 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  line-height: 30px;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.header {
+  font-size: 20px;
+  color: teal;
+  font-weight: bold;
+}
+
+.font {
+  padding-top: 50px;
+}
+
+.popular {
+  font-size: 50px;
+  color: teal;
+  text-align: center;
+  font-family: 'Metropolis Regular';
+  margin-bottom: 30px;
+}
+
+.popular-subheading{
+  font-size:35px;
+}
+
+.course_head {
+  font-size: 30px;
+  color: teal;
+  margin-top: 20px;
+}
+
+.starimg {
+  height: 30px;
+  width: 120px;
+}
+
+.section-bg {
+  background-image: url(bg1.jpg);
+  height: fit-content;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 0;
+}
+.section-bg.style-1 {
+  position: relative;
+}
+.section-bg.style-1:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #183661;
+  opacity: 0.9;
+  z-index: 0;
+}
+.section-bg.style-1 > .container {
+  z-index: 2;
+}
+.section-bg.style-1 .icon {
+  font-size: 3.5rem;
+  color: #51be78;
+}
+.section-bg.style-1 h3 {
+  font-size: 20px;
+  color: #51be78;
+  margin-bottom: 30px;
+}
+.section-bg.style-1 p {
+  color: #7697c6;
+}
+
+.fa-color1 {
+  color: #51be78;
+}
+
+.fa-color {
+  color: teal;
+}
+
+.footerBackground{
+  background: linear-gradient(
+    to right,
+    #03a9f4,
+    #2196f3,
+    #3f51b5,
+    #673ab7,
+    #9c27b0
+  );
+  height: fit-content;
+  width: auto;
+}
+.margin {
+  margin-left: 30px;
+}
+
+.bottom_head {
+  font-size: 20px;
+  color: whitesmoke;
+}
+
+.fa-co {
+  color: lavenderblush;
+}
+.name {
+  color: #008080;
+  font-size: 20px;
+  margin-top: 25px;
+}
+
+.tutor {
+  padding-left: 50px;
+}

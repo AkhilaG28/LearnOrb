@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    
+}
+
+.otherDefaultFont{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.greySubset{
+    font-size: 13px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: grey;
+}
+
+.userFormRegistration .greySubset{
+    margin-bottom: 25px;
+   
+}
+
+a{
+    text-decoration: none;
+    color: rgb(114, 151, 12);
+}
+.userFormRegistration,
+.userFormLogin{
+    max-width: 400px;
+    min-height: 500px;
+    margin:60px auto;
+    padding: 0px 30px 20px;
+    border-radius: 25px;
+    background-image: url('resources/josh-calabrese-XXpbdU_31Sg-unsplash.jpg');
+    background-size: cover;
+    /* box-shadow:0px 0px 20px 0 rgba(0, 0, 0, 0.2); */
+    box-shadow:  18px 18px 36px #7ba89e, 
+    -18px -18px 36px #dfffff
+}
+
+.heading{
+    text-align: center;
+    font-size: 30px;
+    padding: 20px 0px 0px 0px;
+}
+
+.userDetails{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+label{
+    margin-top: 30px;
+}
+
+input{
+    background: transparent;
+    border: 0px;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+
+.animateLine{
+    margin-top: -1px;
+    height: 2px;
+    border: 1px solid rgb(114, 151, 12);
+    transform: translateX(-100%);
+}
+input:focus + div{
+    transform: translateX(0);
+    transition: all 0.5s ease-in;
+}
+
+.userFormRegistration button,
+.userFormLogin button{
+    margin: 20px 0px;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: transparent;
+}
+
+.userFormRegistration button:hover,
+.userFormLogin button:hover{
+    color: black;
+    background: rgba(1, 1, 1, 0.10);
+}
+
+.alternativeLoginFacebook, .alternativeLoginGoogle, .alternativeLoginTwitter{
+    width: 20px;
+    margin: 0px 10px 0px 0px;
+}
+
+.alternativeLoginFacebook:hover, .alternativeLoginGoogle:hover, .alternativeLoginTwitter:hover{
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 400px){
+    #mainContainerLogin,#mainContainerRegistration{
+        width: 90%;
+        margin: auto;
+    }
+
+    .userFormRegistration button{
+        margin-bottom: 12px;
+    }
+
+    .userFormRegistration button + div{
+        padding: 0px;
+    }
+
+}
