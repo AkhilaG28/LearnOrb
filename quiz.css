@@ -1,4 +1,12 @@
-
+#topNav {
+  background-image: linear-gradient(
+    to right,
+    #cc95c0 0%,
+    #cc95c0 41%,
+    #dbd4b4 100%
+  );
+  color: white;
+}
 
 .grid {
   width: 600px;
@@ -19,11 +27,10 @@ h1 {
   z-index: 1;
 }
 
-.card-body{
+.card-body {
   margin-top: 30px;
   border-radius: 39px;
   background: #8bdbcb;
- 
 }
 
 #ques {
@@ -54,16 +61,24 @@ h1 {
   cursor: pointer;
   background-color: rgb(4, 80, 80);
   color: white;
-  /* background-image: linear-gradient(
+  background-image: linear-gradient(
     to right,
     #1a2980 0%,
     #26d0ce 51%,
     #1a2980 100%
-  ); */
+  );
 }
 
 .button > button:focus {
   outline: 0;
+}
+
+#ques {
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  padding: 4% 2%;
+  font-size: 30px;
 }
 
 #progressQues {
@@ -91,35 +106,34 @@ h1 {
   color: whitesmoke;
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
   body {
     background-color: #2bc5a6 !important;
   }
 
-  .card{
-   background-color: #2bc5a6 !important; 
+  .card {
+    background-color: #2bc5a6 !important;
   }
 
-  .card-body{
-    box-shadow:  24px 24px 40px #20947d, 
-    -24px -24px 40px #36f6d0;
+  .card-body {
+    box-shadow: 24px 24px 40px #20947d, -24px -24px 40px #36f6d0;
   }
 
-  #time{
+  #time {
     position: relative;
   }
 
-  #progressQues{
+  #progressQues {
     position: relative;
     color: rgb(4, 80, 80);
   }
 
-  #finalPage{
+  #finalPage {
     background-color: #2bc5a6;
     box-shadow: 10px 15px 5px #cbcbcb62;
   }
 
-  #result{
-    font-family: 'Metropolis Regular';
+  #result {
+    font-family: "Metropolis Regular";
   }
 }
