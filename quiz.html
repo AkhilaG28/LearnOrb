@@ -11,12 +11,14 @@
   <body>
     <div>
       <!-- Application Bar -->
-      <div class="d-flex shadow-sm py-2">
+      <div class="d-flex shadow-sm py-2" id="topNav">
         <div class="ml-5 flex-grow-1">
             <a href="userDashBoard.html"  style="text-decoration: none; color: black;"><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/2034214-84.png" style="height: 50px;"/><span>LearnOrb</span></a>
         </div>
         <div class="mr-5  mt-1 pt-2" id="userName"></div>
     </div>
+
+    <!-- Audio Files -->
     <div class="container">
       <audio id="success">
         <source src="resources/success.mpeg" type="audio/ogg">
@@ -33,11 +35,13 @@
             <h5 class="card-title" id="ques"></h5>
             <div class="card-text">
               <!-- Options -->
-              <div class="button d-flex flex-column align-items-center">
-                <button id="btn0"><span id="option0"></span></button>
-                <button id="btn1"><span id="option1"></span></button>
-                <button id="btn2"><span id="option2"></span></button>
-                <button id="btn3"><span id="option3"></span></button>
+              <div class="button d-sm-flex flex-sm-column d-lg-flex flex-lg-row align-items-center">
+                <button id="btn0" class="col-lg-5"><span id="option0"></span></button>
+                <button id="btn1" class="col-lg-5"><span id="option1"></span></button>
+                </div>
+                <div class="button d-sm-flex flex-sm-column d-lg-flex flex-lg-row align-items-center">
+                <button id="btn2" class="col-lg-5"><span id="option2"></span></button>
+                <button id="btn3" class="col-lg-5"><span id="option3"></span></button>
               </div>
             </div>
           </div>
