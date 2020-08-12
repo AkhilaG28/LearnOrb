@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="quiz.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <div class="grid">
+      <audio id="success">
+        <source src="success.mpeg" type="audio/ogg">
+      </audio>
+      <audio id="fail">
+        <source src="fail.mp3" type="audio/ogg">
+      </audio>
+      <div id="quiz">
+        <h1>QUIZ</h1>
+        <!-- Question -->
+        <p id="ques"></p>
+        <hr />
+        <!-- Options -->
+        <div class="button">
+          <button id="btn0"><span id="option0"></span></button>
+          <button id="btn1"><span id="option1"></span></button>
+          <button id="btn2"><span id="option2"></span></button>
+          <button id="btn3"><span id="option3"></span></button>
+        </div>
+
+        <hr />
+        <!-- Progress -->
+        <div id="progress"></div>
+      </audio>
+    </div>
+
+    <!-- Script File -->
+    <script type="text/javascript" src="quiz.js"></script>
+  </body>
+</html>
