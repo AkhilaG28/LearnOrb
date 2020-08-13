@@ -5,7 +5,6 @@
     #cc95c0 41%,
     #dbd4b4 100%
   );
-  color: white;
 }
 
 .grid {
@@ -21,9 +20,6 @@
 
 h1 {
   text-align: center;
-  color: black;
-  /* position: relative;
-  top: 0px; */
   z-index: 1;
 }
 
@@ -91,7 +87,7 @@ h1 {
   background-color: #1d3c6a;
   color: floralwhite;
   width: 600px;
-  height: 500px;
+  min-height: 500px;
   margin: 0 auto;
   padding: 10px 50px 50px 50px;
   border-radius: 50px;
