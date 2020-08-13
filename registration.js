@@ -16,7 +16,7 @@ function getUserData(){
         let allUserData = event.target.querySelectorAll('input')
         let userData = {
             name: allUserData[0].value,
-            username: allUserData[1].value.toLowerCase(),
+            username: allUserData[1].value,
             email: allUserData[2].value,
             password: allUserData[3].value,
             selectedCourse: selectedCourse
