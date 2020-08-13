@@ -95,7 +95,7 @@ function showResult () {
                              <p>You have cleared the evaluation.</p>
                              <p>We will contact you via email for further process.</p>
                              <p>For any queries, mail us at <a href='#' style='color: #0097a7'>helpdesk@learnorb.com</a></p>
-                             <p style='padding-top:30%'>Click here to go back to <a href='userDashBoard.html' style='color:#0097a7'>dashboard</a></p>`
+                             <p style='padding-top:30%'>Click here to go back to <a href='userDashBoard.html?user=${userName}' style='color:#0097a7'>dashboard</a></p>`
     }
     else {
         document.getElementById( 'fail' ).play()

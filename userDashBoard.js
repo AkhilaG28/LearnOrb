@@ -1,10 +1,16 @@
 window.addEventListener( 'DOMContentLoaded', () => {
     //get the name of the user from URL and display in the application bar
     let user = new URLSearchParams( window.location.search )
-    const userName = user.get( 'user' ).toUpperCase()
-    const selectedCourse = user.get( 'course' )
+    let userName = user.get( 'user' )
     let userNameDiv = document.getElementById( 'userName' )
-    userNameDiv.textContent = userName
+    if(userName == userName.toUpperCase()){
+    userNameDiv.innerHTML = `${userName} <i class="fas fa-check-circle ml-2" style="color:green;"></i>`
+    }
+    else{
+        userName = userName.toUpperCase()
+        userNameDiv.textContent = userName
+    }
+    const selectedCourse = user.get( 'course' )
 
     //display the card based on the selected course
     displayCard( selectedCourse )
