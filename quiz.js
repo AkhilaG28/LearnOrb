@@ -83,10 +83,14 @@ function showProgress () {
     let progress = document.getElementById( 'progressQues' )
     progress.innerHTML = `Question ${ currentQuesNum } of ${ quiz.questions.length }`
 }
-let barGraphData = []
+let barGraphData
+const data = localStorage.getItem( "quizScore" )
+
+barGraphData = JSON.parse( data ) || []
 // Displaying the result
 function showResult () {
     let quizDone = document.getElementById( 'quiz' )
+    console.log( quizDone );
     quizDone.setAttribute( 'id', 'finalPage' )
     let userBarGraphData = {
         'course': selectedCourse,
@@ -103,7 +107,7 @@ function showResult () {
                              <p>You have cleared the evaluation.</p>
                              <p>We will contact you via email for further process.</p>
                              <p>For any queries, mail us at <a href='#' style='color: #0097a7'>helpdesk@learnorb.com</a></p>
-                             <p style='padding-top:30%'>Click here to go back to <a href='userDashBoard.html?user=${userName }' style='color:#0097a7'>dashboard</a></p>`
+                             <p style='padding-top:30%'>Click here to go back to <a href='userDashBoard.html' style='color:#0097a7'>dashboard</a></p>`
     }
     else {
         document.getElementById( 'fail' ).play()
