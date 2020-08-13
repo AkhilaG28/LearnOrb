@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="adminPage.css" type="text/css">
+</head>
+<body>
+    <div>
+        <div class="d-flex shadow-sm py-2" id="applicationLogoBar">
+            <div class="ml-5 flex-grow-1">
+              <a href="index.html" style="text-decoration: none; color: black;"
+                ><img
+                  src="https://d30y9cdsu7xlg0.cloudfront.net/png/2034214-84.png"
+                  style="height: 50px;"
+                /><span>LearnOrb</span></a
+              >
+            </div>
+            <div class="mr-5 mt-1 pt-2">ADMIN</div>
+        </div>
+
+
+        <div class="sideBar" id="sideBarDiv">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <div class="navbarBtnDiv d-flex justify-content-start">
+                <a
+                  class="d-lg-none flex-grow-1 ml-md-4 mt-2"
+                  style="text-decoration: none; color: white;"
+                  href="#"
+                  >Dashboard</a
+                >
+                <button
+                  class="navbar-toggler bg-white mr-3"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+    
+              <div
+                class="collapse navbar-collapse d-lg-flex flex-lg-column"
+                id="navbarSupportedContent"
+              >
+                <ul class="navbar-nav mr-auto d-flex flex-column mb-4 ml-2">
+                  <li class="nav-item active">
+                    <a
+                      class="nav-link"
+                      href="userDashBoard.html"
+                      id="adminSideNavBarOptionHome"
+                      ><i class="fas fa-book ml-2 mr-3"></i>Home
+                      <span class="sr-only">(current)</span></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" id="adminSideNavBarOptionQuizzes"
+                      ><i class="fas fa-pencil-alt ml-2 mr-3"></i>Quizzes</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a id="adminSideNavBarOptionStatistics"
+                        class="nav-link"
+                        role="button"
+                      ><i class="fas fa-chart-pie ml-2 mr-3"></i>Statistics</a
+                    >
+                  </li>
+                </ul>
+                <form
+                  class="form-inline my-2 ml-2 my-lg-0 d-lg-flex flex-lg-column align-items-end"
+                >
+                  <input
+                    class="form-control mr-sm-2 mb-lg-3"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button
+                    type="button"
+                    class="btn btn-outline-success my-2 mr-lg-2 my-sm-0"
+                  >
+                    Search
+                  </button>
+                </form>
+              </div>
+            </nav>
+        </div>
+
+        <div class="row" style="height: 760px;">
+            <div class="col-lg-8 offset-lg-3 my-lg-5">
+              <div class="bodyDashBoard">
+                <div class="row px-0">
+                    <div class="col">
+                    <div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <script type="text/javascript" src="adminPage.js"></script>
+</body>
+</html>

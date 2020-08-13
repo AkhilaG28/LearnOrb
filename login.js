@@ -1,6 +1,6 @@
 (function(){
-    const adminUserName = admin;
-    const adminPassword = admin;
+    const adminUserName = 'admin';
+    const adminPassword = 'admin';
     window.onload = function () {
         document.querySelector( 'body' ).style.opacity = 1
         let creatAccountBtn = document.getElementById( 'createAccount' )
@@ -26,8 +26,7 @@
             username: allUserData[ 0 ].value,
             password: allUserData[ 1 ].value
         }
-
-        if(data.username == adminUserName && data.adminPassword == adminPassword){
+        if(data.username == adminUserName && data.password == adminPassword){
             window.location.assign(`adminPage.html`)
         }
         else{
