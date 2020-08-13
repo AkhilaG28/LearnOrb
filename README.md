@@ -23,7 +23,7 @@ Our website LearnOrb enables users to access the courses, register and to attemp
 - Registration Page allows users to register for the course with a unique username. 
 - Login page enables users to get to their dashboard.
 
-<img width="267" alt="Screenshot (211)" src="https://user-images.githubusercontent.com/61727888/90048507-3e611400-dcf1-11ea-9c22-ad519a7999a0.png">   <img width="267" alt="Screenshot (212)" src="https://user-images.githubusercontent.com/61727888/90048518-40c36e00-dcf1-11ea-95c8-f57813e60c28.png">
+<img width="267" alt="Screenshot (211)" src="https://user-images.githubusercontent.com/61727888/90048507-3e611400-dcf1-11ea-9c22-ad519a7999a0.png">            <img width="267" alt="Screenshot (212)" src="https://user-images.githubusercontent.com/61727888/90048518-40c36e00-dcf1-11ea-95c8-f57813e60c28.png">
 
 
 ### Dashboard Page:
@@ -37,7 +37,7 @@ Our website LearnOrb enables users to access the courses, register and to attemp
 
 ### Result Page:
 - On completing the quiz, the result is displayed.
-<img width="505" alt="Screenshot (218)" src="https://user-images.githubusercontent.com/61727888/90093704-d854ab00-dd49-11ea-8f24-e43e90f72311.png">
+<img width="502" alt="Screenshot (220)" src="https://user-images.githubusercontent.com/61727888/90094089-ab54c800-dd4a-11ea-9275-230f39efa20c.png">
 
 
 ## Additional Features:
