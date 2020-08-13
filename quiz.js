@@ -97,14 +97,12 @@ console.log( url );
 function showResult () {
     clearInterval( timeID )
     let quizDone = document.getElementById( 'quiz' )
-    console.log( quizDone );
     quizDone.setAttribute( 'id', 'finalPage' )
     let userBarGraphData = {
         'course': selectedCourse,
         'name': userName,
         'score': Math.floor( ( quiz.score / questions.length ) * 100 )
     }
-    console.log( userBarGraphData )
     barGraphData.push( userBarGraphData )
     localStorage.setItem( 'quizScore', JSON.stringify( barGraphData ) )
     //storeEvaluationMarks( userBarGraphData )
