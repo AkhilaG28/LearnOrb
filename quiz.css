@@ -91,7 +91,7 @@ h1 {
   background-color: #1d3c6a;
   color: floralwhite;
   width: 600px;
-  height: 500px;
+  min-height: 500px;
   margin: 0 auto;
   padding: 10px 50px 50px 50px;
   border-radius: 50px;

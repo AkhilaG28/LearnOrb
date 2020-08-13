@@ -83,18 +83,21 @@ function showProgress () {
     let progress = document.getElementById( 'progressQues' )
     progress.innerHTML = `Question ${ currentQuesNum } of ${ quiz.questions.length }`
 }
-let barGraphData = []
+// let barGraphData = []
 // Displaying the result
 function showResult () {
+    clearInterval(timeID)
     let quizDone = document.getElementById( 'quiz' )
     quizDone.setAttribute( 'id', 'finalPage' )
     let userBarGraphData = {
         'course': selectedCourse,
-        'name': userName,
+        'name' : userName,
         'score': Math.floor( ( quiz.score / questions.length ) * 100 )
     }
-    barGraphData.push( userBarGraphData )
-    localStorage.setItem( 'quizScore', JSON.stringify( barGraphData ) )
+    console.log(userBarGraphData)
+    storeEvaluationMarks(userBarGraphData)
+    
+
     let percentage = ( ( quiz.score / questions.length ).toFixed( 2 ) * 100 )
     if ( percentage >= 70 ) {
         document.getElementById( 'success' ).play()
@@ -139,6 +142,7 @@ function updateTime () {
     }
     if ( time <= 0 ) {
         showResult()
+        clearInterval(timeID)
     }
 
 }
@@ -146,8 +150,24 @@ function updateTime () {
 const startingMins = 1.2
 let time = startingMins * 60
 const countdown = document.getElementById( 'time' )
-setInterval( updateTime, 1000 )
+let timeID = setInterval( updateTime, 1000 )
 
+
+function storeEvaluationMarks(results){
+    console.log(results)
+    if(localStorage.getItem('quizScore')){
+        let data = JSON.parse(localStorage.getItem('quizScore'))
+        data.push(results)
+        localStorage.setItem('quizScore',JSON.stringify(data))
+    }
+    else{
+        let arr = []
+        localStorage.setItem('quizScore',JSON.stringify(arr))
+        let data = JSON.parse(localStorage.getItem('quizScore'))
+        data.push(results)
+        localStorage.setItem('quizScore',JSON.stringify(data))
+    }
+}
 
 
 
