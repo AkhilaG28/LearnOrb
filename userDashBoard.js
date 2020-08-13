@@ -5,6 +5,9 @@ window.addEventListener( 'DOMContentLoaded', () => {
     let userNameDiv = document.getElementById( 'userName' )
     if(userName == userName.toUpperCase()){
     userNameDiv.innerHTML = `${userName} <i class="fas fa-check-circle ml-2" style="color:green;"></i>`
+    let url = new URLSearchParams(window.location.search)
+    let userCourse = url.get('course')
+    showCards(userCourse)
     }
     else{
         userName = userName.toUpperCase()
@@ -36,5 +39,16 @@ displayCard = ( selectedCourse ) => {
         let card = document.querySelector( '.digitalMarketingCard' )
         card.classList = 'col my-5 py-3 mr-2 col-md-10 mx-md-auto my-lg-0 py-lg-0 digitalMarketingCard'
 
+    }
+}
+
+function showCards(courseName){
+    if(courseName == 'Web Design'){
+        let div = document.getElementById('topicQuizWeb')
+        div.classList = 'col'
+    }
+    else if( courseName == 'App Development'){
+        let div = document.getElementById('topicQuizApp')
+        div.classList = 'col'
     }
 }
