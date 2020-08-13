@@ -83,11 +83,18 @@ function showProgress () {
     let progress = document.getElementById( 'progressQues' )
     progress.innerHTML = `Question ${ currentQuesNum } of ${ quiz.questions.length }`
 }
-
+let barGraphData = []
 // Displaying the result
 function showResult () {
     let quizDone = document.getElementById( 'quiz' )
     quizDone.setAttribute( 'id', 'finalPage' )
+    let userBarGraphData = {
+        'course': selectedCourse,
+        'name': userName,
+        'score': Math.floor( ( quiz.score / questions.length ) * 100 )
+    }
+    barGraphData.push( userBarGraphData )
+    localStorage.setItem( 'quizScore', JSON.stringify( barGraphData ) )
     let percentage = ( ( quiz.score / questions.length ).toFixed( 2 ) * 100 )
     if ( percentage >= 70 ) {
         document.getElementById( 'success' ).play()
@@ -96,7 +103,7 @@ function showResult () {
                              <p>You have cleared the evaluation.</p>
                              <p>We will contact you via email for further process.</p>
                              <p>For any queries, mail us at <a href='#' style='color: #0097a7'>helpdesk@learnorb.com</a></p>
-                             <p style='padding-top:30%'>Click here to go back to <a href='userDashBoard.html?user=${userName}' style='color:#0097a7'>dashboard</a></p>`
+                             <p style='padding-top:30%'>Click here to go back to <a href='userDashBoard.html?user=${userName }' style='color:#0097a7'>dashboard</a></p>`
     }
     else {
         document.getElementById( 'fail' ).play()
@@ -130,7 +137,7 @@ function updateTime () {
         countdown.style.color = 'red'
         countdown.style.fontWeight = 'bold'
     }
-    if(time <= 0){
+    if ( time <= 0 ) {
         showResult()
     }
 
