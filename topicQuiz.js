@@ -7,7 +7,7 @@ import ds from './ds.js'
 let quizTopic = new URLSearchParams( window.location.search )
 let topic = quizTopic.get( 'topic' )
 
-const userName = course.get( 'user' ).toUpperCase()
+const userName = quizTopic.get( 'user' ).toUpperCase()
 let userNameDiv = document.getElementById( 'userName' )
 userNameDiv.textContent = userName
 userNameDiv.style.color = 'black'
@@ -17,6 +17,7 @@ quizHeading.textContent = `${ topic } Quiz`
 
 let questions
 topic == 'Javascript' ? questions = [ ...js ] : topic == 'Bootstrap' ? questions = [ ...boot ] : topic == 'Java' ? questions = [ ...java ] : topic == 'Kotlin' ? questions = [ ...kotlin ] : questions = [ ...ds ]
+
 
 // Quiz class and prototypes
 class Quiz {
@@ -84,13 +85,16 @@ function showProgress () {
     progress.innerHTML = `Question ${ currentQuesNum } of ${ quiz.questions.length }`
 }
 
-let quizData = []
+let quizData
+const data = localStorage.getItem( "quizData" )
+
+quizData = JSON.parse( data ) || []
 // Displaying the result
 function showResult () {
     let quizDone = document.getElementById( 'quiz' )
     quizDone.setAttribute( 'id', 'finalPage' )
     let userQuizData = {
-        'course': selectedCourse,
+        'course': topic,
         'name': userName,
         'score': Math.floor( ( quiz.score / questions.length ) * 100 )
     }
@@ -98,7 +102,7 @@ function showResult () {
     localStorage.setItem( 'quizScore', JSON.stringify( quizData ) )
     document.getElementById( 'success' ).play()
     quizDone.innerHTML = `<h1>Completed the quiz</h1>
-                          <p style='padding-top:40%>Click here to go back to <a href = 'userDashBoard.html?user=${userName }&course=${ selectedCourse }' dashboard<p>`
+                          <p style='padding-top:40%'>Click here to go back to <a href = 'userDashBoard.html?user=${userName }&course=${ quizTopic.get( 'course' ) }'> dashboard</a><p>`
 }
 
 

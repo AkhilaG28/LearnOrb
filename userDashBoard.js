@@ -3,13 +3,13 @@ window.addEventListener( 'DOMContentLoaded', () => {
     let user = new URLSearchParams( window.location.search )
     let userName = user.get( 'user' )
     let userNameDiv = document.getElementById( 'userName' )
-    if(userName == userName.toUpperCase()){
-    userNameDiv.innerHTML = `${userName} <i class="fas fa-check-circle ml-2" style="color:green;"></i>`
-    let url = new URLSearchParams(window.location.search)
-    let userCourse = url.get('course')
-    showCards(userCourse)
+    if ( userName == userName.toUpperCase() ) {
+        userNameDiv.innerHTML = `${ userName } <i class="fas fa-check-circle ml-2" style="color:green;"></i>`
+        let url = new URLSearchParams( window.location.search )
+        let userCourse = url.get( 'course' )
+        showCards( userCourse )
     }
-    else{
+    else {
         userName = userName.toUpperCase()
         userNameDiv.textContent = userName
     }
@@ -24,6 +24,26 @@ window.addEventListener( 'DOMContentLoaded', () => {
     } )
 
 } )
+
+
+//Getting Quiz Topics
+let quizTopic = document.querySelectorAll( '.quizTopic' )
+console.log( quizTopic );
+
+getTopic = () => {
+    let topic = event.target.parentElement.children[ 0 ].textContent
+    console.log( topic );
+    let url = new URLSearchParams( window.location.search )
+    url.append( 'topic', topic )
+    window.location.assign( `topicQuiz.html?${ url.toString() }` )
+}
+
+for ( let i = 0; i < quizTopic.length; i++ ) {
+    quizTopic[ i ].addEventListener( 'click', getTopic )
+}
+
+
+//quizTopic.addEventListener( 'click', getTopic )
 
 
 displayCard = ( selectedCourse ) => {
@@ -42,13 +62,13 @@ displayCard = ( selectedCourse ) => {
     }
 }
 
-function showCards(courseName){
-    if(courseName == 'Web Design'){
-        let div = document.getElementById('topicQuizWeb')
+function showCards ( courseName ) {
+    if ( courseName == 'Web Design' ) {
+        let div = document.getElementById( 'topicQuizWeb' )
         div.classList = 'col'
     }
-    else if( courseName == 'App Development'){
-        let div = document.getElementById('topicQuizApp')
+    else if ( courseName == 'App Development' ) {
+        let div = document.getElementById( 'topicQuizApp' )
         div.classList = 'col'
     }
 }

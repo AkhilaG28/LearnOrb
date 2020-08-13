@@ -122,7 +122,7 @@ function showResult () {
                               <h2 id = 'result'>Sorry ${userName }</h2>
                               <p>You did not clear the evaluation.</p>
                               <p>Hope to see you in the next course with more grace.</p>
-                              <p style='padding-top:30%'>Click here to go back to <a href='userDashBoard.html${course }'>dashboard</a></p>`
+                              <p style='padding-top:30%'>Click here to go back to <a href='userDashBoard.html?${course }'>dashboard</a></p>`
     }
 }
 
