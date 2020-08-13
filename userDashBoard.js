@@ -8,6 +8,11 @@ window.addEventListener( 'DOMContentLoaded', () => {
 
     //display the card based on the selected course
     displayCard( selectedCourse )
+    let quiz = document.querySelector( '.quiz' )
+    quiz.addEventListener( 'click', () => {
+        console.log( user.toString() );
+        window.location.assign( `quiz.html?${ user.toString() }` )
+    } )
 
 } )
 

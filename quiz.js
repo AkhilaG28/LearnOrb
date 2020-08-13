@@ -1,17 +1,18 @@
 import web from './web.js'
 import app from './android.js'
 
-let selectedCourse = localStorage.getItem( 'activeUser' )
-selectedCourse = JSON.parse( selectedCourse );
-selectedCourse = selectedCourse.selectedCourse
+
+let course = new URLSearchParams( window.location.search )
+let selectedCourse = course.get( 'course' )
+
 console.log( selectedCourse );
 
-const userName = JSON.parse(localStorage.getItem('activeUser')).username.toUpperCase()
-let userNameDiv = document.getElementById('userName')
+const userName = course.get( 'user' ).toUpperCase()
+let userNameDiv = document.getElementById( 'userName' )
 userNameDiv.textContent = userName
 
-let quizHeading = document.querySelector('#quiz > h1')
-quizHeading.textContent = `Pre Evaluation for ${selectedCourse} Program`
+let quizHeading = document.querySelector( '#quiz > h1' )
+quizHeading.textContent = `Pre Evaluation for ${ selectedCourse } Program`
 
 let questions
 selectedCourse == 'App Development' ? questions = [ ...app ] : questions = [ ...web ]
