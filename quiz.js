@@ -89,9 +89,7 @@ const data = localStorage.getItem( "quizScore" )
 
 barGraphData = JSON.parse( data ) || []
 
-let url = window.location.search
 
-console.log( url );
 
 // Displaying the result
 function showResult () {
@@ -118,7 +116,7 @@ function showResult () {
                              <p>You have cleared the evaluation.</p>
                              <p>We will contact you via email for further process.</p>
                              <p>For any queries, mail us at <a href='#' style='color: #0097a7'>helpdesk@learnorb.com</a></p>
-                             <p style='padding-top:30%'>Click here to go back to <a href='userDashBoard.html${url }' style='color:#0097a7'>dashboard</a></p>`
+                             <p style='padding-top:30%'>Click here to go back to <a href='userDashBoard.html?user=${course.get( 'user' ).toUpperCase() }&course=${ course.get( 'course' ) }' style='color:#0097a7'>dashboard</a></p>`
     }
     else {
         document.getElementById( 'fail' ).play()
@@ -126,7 +124,7 @@ function showResult () {
                               <h2 id = 'result'>Sorry ${userName }</h2>
                               <p>You did not clear the evaluation.</p>
                               <p>Hope to see you in the next course with more grace.</p>
-                              <p style='padding-top:30%'>Click here to go back to <a href='userDashBoard.html${url }'>dashboard</a></p>`
+                              <p style='padding-top:30%'>Click here to go back to <a href='userDashBoard.html${course }'>dashboard</a></p>`
     }
 }
 
