@@ -1,5 +1,7 @@
 import js from './javascript.js'
 import boot from './bootstrap.js'
+import java from './java.js'
+import kotlin from './kotlin.js'
 import ds from './ds.js'
 
 let quizTopic = new URLSearchParams( window.location.search )
@@ -14,7 +16,7 @@ let quizHeading = document.querySelector( '#quiz > h1' )
 quizHeading.textContent = `${ topic } Quiz`
 
 let questions
-topic == 'Javascript' ? questions = [ ...js ] : topic == 'Bootstrap' ? questions = [ ...boot ] : questions = [ ...ds ]
+topic == 'Javascript' ? questions = [ ...js ] : topic == 'Bootstrap' ? questions = [ ...boot ] : topic == 'Java' ? questions = [ ...java ] : topic == 'Kotlin' ? questions = [ ...kotlin ] : questions = [ ...ds ]
 
 // Quiz class and prototypes
 class Quiz {
