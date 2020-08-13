@@ -130,6 +130,9 @@ function updateTime () {
         countdown.style.color = 'red'
         countdown.style.fontWeight = 'bold'
     }
+    if(time <= 0){
+        showResult()
+    }
 
 }
 
