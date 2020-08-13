@@ -10,6 +10,7 @@ console.log( selectedCourse );
 const userName = course.get( 'user' ).toUpperCase()
 let userNameDiv = document.getElementById( 'userName' )
 userNameDiv.textContent = userName
+userNameDiv.style.color = 'black'
 
 let quizHeading = document.querySelector( '#quiz > h1' )
 quizHeading.textContent = `Pre Evaluation for ${ selectedCourse } Program`
@@ -91,7 +92,7 @@ function showResult () {
     if ( percentage >= 70 ) {
         document.getElementById( 'success' ).play()
         quizDone.innerHTML = `<h1>Result</>
-                             <h2 id = 'result'>Congratulations</h2>
+                             <h2 id = 'result'>Congratulations ${userName }</h2>
                              <p>You have cleared the evaluation.</p>
                              <p>We will contact you via email for further process.</p>
                              <p>For any queries, mail us at <a href='#' style='color: #0097a7'>helpdesk@learnorb.com</a></p>
@@ -100,7 +101,7 @@ function showResult () {
     else {
         document.getElementById( 'fail' ).play()
         quizDone.innerHTML = `<h1>RESULT</h1>
-                              <h2 id = 'result'>Sorry</h2>
+                              <h2 id = 'result'>Sorry ${userName }</h2>
                               <p>You did not clear the evaluation.</p>
                               <p>Hope to see you in the next course with more grace.</p>
                               <p style='padding-top:30%'>Click here to go back to <a href='userDashBoard.html'>dashboard</a></p>`
